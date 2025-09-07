@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\MilkTypeController;
+use App\Http\Controllers\API\CustomerController;
 
 Route::prefix('auth')->group(function () {
     Route::post('/register', [AuthController::class, 'register']);
@@ -19,4 +20,5 @@ Route::prefix('auth')->group(function () {
 
 Route::prefix('v1')->middleware('auth:sanctum')->group(function(){
     Route::apiResource('milk-type',MilkTypeController::class);
+    Route::apiResource('customer',CustomerController::class)->parameters(['customer'=>'user']);
 });
