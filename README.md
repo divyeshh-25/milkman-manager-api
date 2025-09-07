@@ -15,7 +15,7 @@ REST API for milk delivery management system. Handle customers, daily deliveries
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ / PHP 8.1+ (depending on implementation)
+- PHP 8.1+ (depending on implementation)
 - SQLite (development) / MySQL/PostgreSQL (production)
 
 ### Installation
