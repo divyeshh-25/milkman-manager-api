@@ -54,55 +54,55 @@ GET    /api/auth/me          # Get current user
 
 ### Customers
 ```
-GET    /api/customers        # List all customers
-POST   /api/customers        # Create new customer
-GET    /api/customers/{id}   # Get customer details
-PUT    /api/customers/{id}   # Update customer
-DELETE /api/customers/{id}   # Delete customer
-GET    /api/customers/search?q={query}  # Search customers
+GET    /api/customer        # List all customers
+POST   /api/customer        # Create new customer
+GET    /api/customer/{id}   # Get customer details
+PUT    /api/customer/{id}   # Update customer
+DELETE /api/customer/{id}   # Delete customer
+GET    /api/customer/search?q={query}  # Search customers
 ```
 
 ### Milk Types
 ```
-GET    /api/milk-types       # List all milk types
-POST   /api/milk-types       # Create milk type
-PUT    /api/milk-types/{id}  # Update milk type
-DELETE /api/milk-types/{id}  # Delete milk type
+GET    /api/milk-type       # List all milk types
+POST   /api/milk-type       # Create milk type
+PUT    /api/milk-type/{id}  # Update milk type
+DELETE /api/milk-type/{id}  # Delete milk type
 ```
 
 ### Daily Deliveries
 ```
-GET    /api/deliveries?date={YYYY-MM-DD}  # Get deliveries for date
-POST   /api/deliveries                    # Record delivery
-PUT    /api/deliveries/{id}               # Update delivery
-DELETE /api/deliveries/{id}               # Delete delivery
-POST   /api/deliveries/bulk               # Bulk delivery update
-GET    /api/deliveries/customer/{id}      # Customer delivery history
+GET    /api/deliverie?date={YYYY-MM-DD}  # Get deliveries for date
+POST   /api/deliverie                    # Record delivery
+PUT    /api/deliverie/{id}               # Update delivery
+DELETE /api/deliverie/{id}               # Delete delivery
+POST   /api/deliverie/bulk               # Bulk delivery update
+GET    /api/deliverie/customer/{id}      # Customer delivery history
 ```
 
 ### Bills
 ```
-GET    /api/bills?month={YYYY-MM}         # Get bills for month
-POST   /api/bills/generate?month={YYYY-MM} # Generate monthly bills
-GET    /api/bills/{id}                    # Get bill details
-GET    /api/bills/{id}/pdf                # Download bill PDF
-POST   /api/bills/{id}/send-whatsapp      # Send bill via WhatsApp
+GET    /api/bill?month={YYYY-MM}         # Get bills for month
+POST   /api/bill/generate?month={YYYY-MM} # Generate monthly bills
+GET    /api/bill/{id}                    # Get bill details
+GET    /api/bill/{id}/pdf                # Download bill PDF
+POST   /api/bill/{id}/send-whatsapp      # Send bill via WhatsApp
 ```
 
 ### Payments
 ```
-GET    /api/payments                      # List payments
-POST   /api/payments                      # Record payment
-GET    /api/payments/customer/{id}        # Customer payment history
-PUT    /api/payments/{id}                 # Update payment
+GET    /api/payment                      # List payments
+POST   /api/payment                      # Record payment
+GET    /api/payment/customer/{id}        # Customer payment history
+PUT    /api/payment/{id}                 # Update payment
 ```
 
 ### Dashboard & Reports
 ```
 GET    /api/dashboard/stats               # Dashboard statistics
-GET    /api/reports/revenue?start_date={date}&end_date={date}  # Revenue report
-GET    /api/reports/pending-payments      # Pending payments report
-GET    /api/reports/delivery-summary?month={YYYY-MM}  # Delivery summary
+GET    /api/report/revenue?start_date={date}&end_date={date}  # Revenue report
+GET    /api/report/pending-payments      # Pending payments report
+GET    /api/report/delivery-summary?month={YYYY-MM}  # Delivery summary
 ```
 
 ## 📊 Database Schema
