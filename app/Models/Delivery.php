@@ -22,7 +22,7 @@ class Delivery extends Model
 
     public function milkType()
     {
-        $this->belongsTo(MilkType::class);
+        return $this->belongsTo(MilkType::class);
     }
 
 }
