@@ -21,6 +21,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'flat_no',
+        'phone',
+        'milk_type_id',
+        'default_qty',
+        'rate',
+        'status'
     ];
 
     /**
@@ -44,5 +50,22 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function milkTypes()
+    {
+        return $this->belongsToMany(MilkType::class, 'customer_milk_types')
+            ->withPivot(['default_qty', 'rate'])
+            ->withTimestamps();
+    }
+
+    public function bills()
+    {
+        $this->hasMany(Bill::class,'customer_id');
+    }
+
+    public function deliveries()
+    {
+        $this->hasMany(Delivery::class,'customer_id');
     }
 }
